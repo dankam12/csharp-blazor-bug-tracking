@@ -5,6 +5,7 @@
     <InputText @bind-Value="@AddBug.Description" placeholder="Enter Description" />
     <InputText @bind-Value="@AddBug.Priority" placeholder="Enter Priority" />
     <DataAnnotationsValidator />
+    <ValidationSummary />
     <button type="submit">Add Bug</button>
 </EditForm>
 @code {
