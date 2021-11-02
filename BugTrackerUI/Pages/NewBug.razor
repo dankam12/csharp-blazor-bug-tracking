@@ -1,15 +1,15 @@
 ﻿@page "/new-bug"
-<h3>Add new Bug</h3>
+<h3>Add new Bug</h3
 <EditForm Model="AddBug" OnvalidSubmit="HandleValidSubmit">
     <InputText @bind-Value="@AddBug.Title" placeholder="Enter Title" />
     <InputText @bind-Value="@AddBug.Description" placeholder="Enter Description" />
     <InputText @bind-Value="@AddBug.Priority" placeholder="Enter Priority" />
-
-    <button type="submit" >Add Bug</button>
+    <DataAnnotationsValidator />
+    <button type="submit">Add Bug</button>
 </EditForm>
 @code {
     public Bug AddBug { get; set; } = new Bug();
-   
+
     [Inject]
     public NavigationManager NavService { get; set; }
     [Inject]

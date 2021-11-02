@@ -10,10 +10,13 @@ namespace BugTrackerUI
     {
         public int Id { get; set; }
 
+        [Required]
         public string Title { get; set; }
-
+        [MinLength(10)]
         public string Description { get; set; }
 
+
+        [Range(1,5)]
         public string Priority { get; set; }
     }
 }
